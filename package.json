@@ -1,0 +1,27 @@
+{
+  "name": "serialmonitor",
+  "version": "1.0.0",
+  "description": "an serialmonitor app build with electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "install": "electron-rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZSirag/serialMonitor.git"
+  },
+  "author": "zaza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZSirag/serialMonitor/issues"
+  },
+  "homepage": "https://github.com/ZSirag/serialMonitor#readme",
+  "devDependencies": {
+    "electron": "^6.0.1",
+    "electron-rebuild": "^1.8.5"
+  },
+  "dependencies": {
+    "serialport": "^7.1.5"
+  }
+}
