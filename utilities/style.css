@@ -1,8 +1,203 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
-#test{
-    color: aquamarine;
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 0 none;
+}
+body {
+    background-color: #111a20;
+}
+
+.container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        "com baud"
+        "button button";
+    grid-gap: 15px;
+    padding: 30px 40px;
+    background-color: #01050F;
+    border-radius: 3px;
+    border-bottom: 3px solid #62b8ff !important
+}
+
+.box>#com {
+    grid-area: com;
+}
+
+.box>#baud {
+    grid-area: baud;
+}
+
+.box>button {
+    grid-area: button;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(12, 32, 58);
+    color: white;
+    padding: 12px;
+    font-size: 20px;
+}
+
+.box select {
+    background-color: rgb(12, 32, 58);
+    color: white;
+    padding: 12px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    outline: none;
+    -webkit-appearance: none;
+    width: 150px;
+    border-radius: 3px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    position: relative;
+    top: 1px
+}
+
+.navbar {
+    top: 0px;
+    position: fixed;
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto auto;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+.navbar>span {
+    z-index: 2;
+    padding: 8px;
+    border: none;
+    text-align: center;
+    color: whitesmoke;
+    background: #111a20;
+    font-size: 18px;
+}
+
+.navbar>span:hover {
+    cursor: pointer;
+    background-color: rgb(12, 32, 58);
+}
+
+.active {
+    border-bottom: 3px solid #62b8ff !important;
+}
+
+.icon {
+    vertical-align: middle;
+    margin-right: 10px;
+    position: relative;
+    widows: 30px;
+    height: 30px;
+    top: -2px;
+}
+
+.body {
+    margin-top: 49px;
+    width: 100%;
+}
+
+.input {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: grid;
+    grid-gap: 14px;
+    grid-template-columns: auto 40px;
+    padding: 6px 14px;
+    background-color: rgb(12, 32, 58);
+    border-top: 3px solid #62b8ff !important;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+.input>input {
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    color: whitesmoke;
+    padding: 8px;
+}
+
+.input>input::placeholder {
+    color: whitesmoke;
+    opacity: 1;
+}
+
+.input>input::-ms-input-placeholder {
+    color: whitesmoke;
+}
+
+#send {
+    background-image: url("../resource/send.png");
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    border: none;
+    height: 40px;
+}
+
+.toolbar {
+    margin-bottom: 58px;
+}
+
+.messagebox {
+    background-color: #111a20;
+    display: flex;
+    align-items: center;
+    padding: 18px;
+}
+
+.messagebox>.user {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.thumb {
+    border-style: solid;
+    border-width: 0px 15px 15px 15px;
+    border-color: transparent transparent #01050F transparent;
+    transform: rotate(-90deg);
+}
+
+.messagebox .message {
+    background-color: rgb(1, 5, 15);
+    word-wrap: wrap;
+    padding: 8px 14px;
+    border-radius: 3px;
+    margin-left: -8px;
+    min-width: 400px;
+    max-width: 800px;
+    width: 70%;
+    color: whitesmoke;
+}
+
+.dx {
+    flex-direction: row-reverse;
+}
+
+.dx>.thumb {
+    transform: rotate(90deg);
+    margin-left: -8px;
 }
