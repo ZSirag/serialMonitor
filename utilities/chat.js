@@ -8,7 +8,7 @@ var baud = Number(set.baud);
 var com = set.com;
 const ser = new SerialPort(com, {baudRate: baud});
 ser.pipe(parser);
-parser.on('data', function (data) {
-    console.log(data);
-});
 
+parser.on('data', function (data) {
+    chat(data, "terminal");
+});

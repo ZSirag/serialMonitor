@@ -77,6 +77,7 @@ button:active {
 }
 
 .navbar {
+    z-index: 2;
     top: 0px;
     position: fixed;
     display: grid;
@@ -119,6 +120,7 @@ button:active {
 }
 
 .input {
+    z-index: 2;
     position: fixed;
     bottom: 0px;
     width: 100%;
